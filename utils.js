@@ -12,6 +12,32 @@ async function getWeather(input) {
     }
 }
 
+/* Type of search function*/
+function typeOfQuery(input) {
+  if (isNaN(input) && containsNumber(input)) {
+    searchTerm = input;
+  } 
+  else if (isANumber(input) && input.length <= 5) {
+    searchTerm = `${'zip='}${input}`;
+  } 
+  else {
+    searchTerm = `${'q='}${input}`;
+  }
+}
+
+/* Clear user input function*/
+function clear() {
+  userEntry.value = '';
+}
+
+/* Is a number or doesn't contain a number functions */
+function isANumber(input) {
+  return !/\D/.test(input);
+}
+function containsNumber(input) {
+  return /\d/.test(input);
+}
+
 function displayWeather(data) {
     /* Set background depending on weather*/
     switch (data.weather[0].main) {
@@ -68,4 +94,4 @@ function getLocalTime(data) {
     return localTimeDate.toLocaleString();
 }
 
-export { getLocalTime, kelvinToCelcius, kelvinToFahrenheit, toFahrenheit, toCelsius }
+export { data, getLocalTime, toCelsius, toFahrenheit, kelvinToCelcius, kelvinToFahrenheit, getWeather, displayWeather, containsNumber, clear, isANumber };
