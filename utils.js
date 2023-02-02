@@ -2,7 +2,7 @@ async function getWeather(input) {
     typeOfQuery(input);
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?${searchTerm}&appid=49257f6591cfc3ed8daf0b5970d519cb&units=standard`,
+        `https://api.openweathermap.org/data/2.5/weather?${searchTerm}&appid=8bca1959c6a202f7005fb61ead8b63e5&units=standard`,
         { mode: 'cors' }
       );
       const data = await response.json();
@@ -68,4 +68,4 @@ function getLocalTime(data) {
     return localTimeDate.toLocaleString();
 }
 
-export { getLocalTime, kelvinToCelcius, kelvinToFahrenheit, toFahrenheit }
+export { getLocalTime, kelvinToCelcius, kelvinToFahrenheit, toFahrenheit, toCelsius }
