@@ -67,3 +67,5 @@ function getLocalTime(data) {
     let localTimeDate = new Date(localTime);
     return localTimeDate.toLocaleString();
 }
+
+export { getLocalTime, kelvinToCelcius, kelvinToFahrenheit, toFahrenheit }
