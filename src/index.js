@@ -58,7 +58,37 @@ import { getLocalTime, kelvinToCelcius, kelvinToFahrenheit, toFahrenheit, toCels
     cityTemperature.innerHTML = `${temp + '&degC'}`;
   }
 
+  weatherImg.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
   
+  cityWeatherDescription.innerHTML = weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1);
+  
+  tempFeeling.innerHTML = `${'Feels like: '}${tempFeel + '&deg'}`;
+
+  humidityMeter.innerHTML = `${'Humidity levels: '} ${ data.main.humidity + '%'}`;
+  windMeter.innerHTML = `${'Wind: '}${data.wind.speed + 'k/m'}`;
+
+  toggleSwitch.addEventListener('change', () => {
+    if (toggleSwitch.checked) {
+      setTimeout(() => {
+        temp = toFahrenheit(temp);
+        tempFeel = toFahrenheit(tempFeel);
+        cityTemperature.innerHTML = `${temp + '&degF'}`;
+        tempFeeling.innerHTML = `${'Feels like: '}${tempFeel + '&deg'}`;
+      }, 150);
+    } else {
+      setTimeout(() => {
+        temp = toCelsius(temp);
+        tempFeel = toCelsius(tempFeel);
+        cityTemperature.innerHTML = `${temp + '&degC'}`;
+        tempFeeling.innerHTML = `${'Feels like: '}${tempFeel + '&deg'}`;
+      }, 150);
+    }
+  });
+
+  
+
+
+
 
 
 
