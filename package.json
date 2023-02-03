@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A website that allows user to check the weather of any city of their choice. User can fetch weather from anywhere around the world using city names and zip codes. ",
+  "main": "../src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaiydmala/weather-app.git"
+  },
+  "author": "Zaiyd Mala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaiydmala/weather-app/issues"
+  },
+  "homepage": "https://github.com/zaiydmala/weather-app#readme",
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
