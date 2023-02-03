@@ -50,21 +50,21 @@
     /* Set background depending on weather*/
     switch (data.weather[0].main) {
       case 'Clear':
-        document.body.style.backgroundImage = 'url("/dist/clear.jpg")';
+        document.body.style.backgroundImage = 'url("../dist/clear.jpg")';
         break;
       case 'Clouds':
-        document.body.style.backgroundImage = 'url("/dist/cloudy.jpg")';
+        document.body.style.backgroundImage = 'url("../dist/cloudy.jpg")';
         break;
       case 'Rain':
       case 'Drizzle':
       case 'Mist':
-        document.body.style.backgroundImage = 'url("/dist/rain.jpg")';
+        document.body.style.backgroundImage = 'url("../dist/rain.jpg")';
         break;
       case 'Thunderstorm':
-        document.body.style.backgroundImage = 'url("/dist/thunderstorm.jpg")';
+        document.body.style.backgroundImage = 'url("../dist/thunderstorm.jpg")';
         break;
       case 'Snow':
-        document.body.style.backgroundImage = 'url("/dist/snow.jpg")';
+        document.body.style.backgroundImage = 'url("../dist/snow.jpg")';
         break;
       default:
         break;
